@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+	<link rel="stylesheet" type="text/css" href="birchStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="birchScript.js"></script>
+</head>
+<body>
+<div class="sidenav">
+  <a href="about.html">About</a>
+  <button class="dropdown-btn active_at_start">Week 2 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="variables.html">Variables</a>
+    <a class="active_child_at_start" href="functions.html">Functions</a>
+    <a href="parameters.html">Parameters</a>
+    <a href="conditionals.html">Conditionals</a>
+    <a href="arrays.html">Arrays</a>
+    <a href="assocArrays.html">Associative Arrays</a>
+    <a href="loops.html">Loops</a>
+  </div>
+  <button class="dropdown-btn">Week 3
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Object Creation Functions</a>
+    <a href="#">Inheritance</a>
+    <a href="#">Properties</a>
+    <a href="#">Methods</a>
+    <a href="#">Instantiation</a>
+  </div>
+  <button class="dropdown-btn">Week 4
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Using XMLHTTPRequest</a>
+  </div>
+  <button class="dropdown-btn">Week 5 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">JSON</a>
+    <a href="#">Stringify</a>
+  </div>
+  <button class="dropdown-btn">Week 6 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Local Storage API</a>
+    <a href="#">Storing and Retrieving Simple Data</a>
+    <a href="#">Arrays</a>
+    <a href="#">Associative Arrays</a>
+    <a href="#">Objects</a>
+  </div>
+  <button class="dropdown-btn">Week 7
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">DOM Manipulation</a>
+    <a href="#">Manipulating CSS Class Properties Using JavaScript</a>
+  </div>
+  <button class="dropdown-btn">Week 8 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">CSS3 Transitions and Animations</a>
+    <a href="#">Standard JavaScript Events</a>
+  </div>
+  <button class="dropdown-btn">Week 9
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">HTML5 Tags</a>
+  </div>
+  <button class="dropdown-btn">Week 10 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Transitions</a>
+    <a href="#">Transforms</a>
+    <a href="#">Animations</a>
+  </div>
+</div>
+<div class="main">
+  <div class="pagination lesson_header">
+    <a left href="variables.html">❮</a>
+    <h2 class="title">Functions</h2>
+    <a right href="parameters.html">❯</a>
+  </div>
+
+  
+  <p>Now that we can save pieces of data as variables we can use that data to give a program functionality and make it do computations or change the data. This is done with functions. A <b>function</b> or method is a chunk of code designed to perform a certain task with data in the program.
+  JavaScript uses the "function" keyword followed by the name of the function. <b>Parameters</b> are placed in parentheses and the logic of the function is placed in curly brackets. A <b>return</b> value can be used to send the returned value to the caller.</p>
+
+  <h2>Example</h2>
+
+  <p>Let's create a program that adds two to any number entered by the user. Because functions <i>do</i> things, it is good naming convention to give them verb phrases as names to reflect what the function does. For our function that adds two we will call it "addTwo". After the arithmetic of add 2 to a number the function will “return” the solution to the caller.  </p>
+
+  Enter a Number: <input id="numInput" type="number" name="number">
+  <button type="button" onclick="addTwoClicked()">Add 2</button>
+  <p>Simple enough! This is the code behind the functionality:</p>
+  <script src="https://gist.github.com/birch-jayton/3b86525a652cd0a7ead2672ffe8e2cb8.js"></script>
+  <p>In the last lesson we used a variable in the alert function to display the name. Notice that addTwo() is used as if it were a function. The function “returns” the result of the logic of the function which is the variable that’s used to display the result to the user.</p>
+</div>
+<script type="text/javascript">
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+	<link rel="stylesheet" type="text/css" href="birchStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="birchScript.js"></script>
+</head>
+<body>
+<div class="sidenav">
+  <a href="about.html">About</a>
+  <button class="dropdown-btn active_at_start">Week 2 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a class="active_child_at_start" href="variables.html">Variables</a>
+    <a href="functions.html">Functions</a>
+    <a href="parameters.html">Parameters</a>
+    <a href="conditionals.html">Conditionals</a>
+    <a href="arrays.html">Arrays</a>
+    <a href="assocArrays.html">Associative Arrays</a>
+    <a href="loops.html">Loops</a>
+  </div>
+  <button class="dropdown-btn">Week 3
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Object Creation Functions</a>
+    <a href="#">Inheritance</a>
+    <a href="#">Properties</a>
+    <a href="#">Methods</a>
+    <a href="#">Instantiation</a>
+  </div>
+  <button class="dropdown-btn">Week 4
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Using XMLHTTPRequest</a>
+  </div>
+  <button class="dropdown-btn">Week 5 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">JSON</a>
+    <a href="#">Stringify</a>
+  </div>
+  <button class="dropdown-btn">Week 6 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Local Storage API</a>
+    <a href="#">Storing and Retrieving Simple Data</a>
+    <a href="#">Arrays</a>
+    <a href="#">Associative Arrays</a>
+    <a href="#">Objects</a>
+  </div>
+  <button class="dropdown-btn">Week 7
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">DOM Manipulation</a>
+    <a href="#">Manipulating CSS Class Properties Using JavaScript</a>
+  </div>
+  <button class="dropdown-btn">Week 8 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">CSS3 Transitions and Animations</a>
+    <a href="#">Standard JavaScript Events</a>
+  </div>
+  <button class="dropdown-btn">Week 9
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">HTML5 Tags</a>
+  </div>
+  <button class="dropdown-btn">Week 10 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Transitions</a>
+    <a href="#">Transforms</a>
+    <a href="#">Animations</a>
+  </div>
+</div>
+<div class="main">
+  <div class="pagination lesson_header">
+    <a left href="about.html">❮</a>
+    <h2 class="title">Variables</h2>
+    <a right href="functions.html">❯</a>
+  </div>
+
+  
+  <p>A <b>Variable</b> is memory that contains a data value of a certain data type. It is a piece of information that the programmer can use to perform certain tasks. For example, when you perform the task of saying your friend’s name when you greet them, the name used is a variable in your memory that you use to perform the “function” of saying your friend’s name.
+ </p>
+  <p>A <b>Data Type</b> is the classification of data so the compiler knows what the programer wants the data to represent. </p>
+  <p>The <b>primitive</b> or basic data types in JavaScript are:</p>
+  <ul>
+    <li>Boolean</li>
+    <li>Null</li>
+    <li>Undefined</li>
+    <li>Number</li>
+    <li>String</li>
+    <li>Symbol</li>
+  </ul>
+  <p>Using the friendly greeting as an example, your friend’s name is obviously a string of English characters, not a number. The programmer must use the correct data types for the respective variables that they create. If they use a floating point variable that is 32-bits long to record whether something is a 0 or 1 then that would be a big waste of memory (like using a quarter of your long term memory to remember your friends name). Luckily, this is easy in JavaScript. Using the keyword <b>var</b> will declare your variable and and also detect the proper datatype as determined by the value you assign it.
+  </p>
+  <script src="https://gist.github.com/birch-jayton/3adfc65df51eabbc89740206c73d7629.js"></script>
+  <h2>Example</h2>
+  <p>Let's say your name! We will create a textbox to receive the name or any other text and declare a variable to represent the data entered by the user. Enter your name and submit. The entered text should appear as an alert on your browser.</p>
+  
+  Enter name: <input id="nameInput" type="text" name="fname">
+  <button type="button" onclick="displayName()">Submit</button>
+
+  <p>Let's look at what's happening under the hood. The place where you enter your name is an input element that can be referenced in the JavaScript file by its id. When the form is submitted, the displayName() function is called.
+  </p>
+  <script src="https://gist.github.com/birch-jayton/b7f18a8769dfce48873ea71949550395.js"></script>
+  <p>In this function, a variable "enteredName" is created and given the value of the input element (line 3). The alert() function is then called and displays enteredName.</p>
+</div>
+<script type="text/javascript">
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

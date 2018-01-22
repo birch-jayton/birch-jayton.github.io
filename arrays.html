@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conditionals</title>
+	<link rel="stylesheet" type="text/css" href="birchStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="birchScript.js"></script>
+</head>
+<body>
+<div class="sidenav">
+  <a href="about.html">About</a>
+  <button class="dropdown-btn active_at_start">Week 2 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="variables.html">Variables</a>
+    <a href="functions.html">Functions</a>
+    <a href="parameters.html">Parameters</a>
+    <a href="conditionals.html">Conditionals</a>
+    <a class="active_child_at_start" href="arrays.html">Arrays</a>
+    <a href="assocArrays.html">Associative Arrays</a>
+    <a href="loops.html">Loops</a>
+  </div>
+  </div>
+  <button class="dropdown-btn">Week 3
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Object Creation Functions</a>
+    <a href="#">Inheritance</a>
+    <a href="#">Properties</a>
+    <a href="#">Methods</a>
+    <a href="#">Instantiation</a>
+  </div>
+  <button class="dropdown-btn">Week 4
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Using XMLHTTPRequest</a>
+  </div>
+  <button class="dropdown-btn">Week 5 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">JSON</a>
+    <a href="#">Stringify</a>
+  </div>
+  <button class="dropdown-btn">Week 6 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Local Storage API</a>
+    <a href="#">Storing and Retrieving Simple Data</a>
+    <a href="#">Arrays</a>
+    <a href="#">Associative Arrays</a>
+    <a href="#">Objects</a>
+  </div>
+  <button class="dropdown-btn">Week 7
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">DOM Manipulation</a>
+    <a href="#">Manipulating CSS Class Properties Using JavaScript</a>
+  </div>
+  <button class="dropdown-btn">Week 8 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">CSS3 Transitions and Animations</a>
+    <a href="#">Standard JavaScript Events</a>
+  </div>
+  <button class="dropdown-btn">Week 9
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">HTML5 Tags</a>
+  </div>
+  <button class="dropdown-btn">Week 10 
+    <i class="caret material-icons">expand_more</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Transitions</a>
+    <a href="#">Transforms</a>
+    <a href="#">Animations</a>
+  </div>
+</div>
+<div class="main">
+  <div class="pagination lesson_header">
+    <a left href="conditionals.html">❮</a>
+    <h2 class="title">Arrays</h2>
+    <a right href="assocArrays.html">❯</a>
+  </div>
+
+
+  <p>
+  </p>
+  
+</div>
+<script type="text/javascript">
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
