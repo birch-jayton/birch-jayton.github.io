@@ -92,9 +92,12 @@
   </div>
 
 
-  <p>
+  <p>An <b>associative array</b> is where a variable in an array has a named index. Sometimes referred to as dictionaries. <br> JavaScript does NOT allow associative arrays. All arrays in JavaScript have a numbered index. <b>Objects</b> in JavaScript however do used a named index. This comes in handy when retrieving using JSON objects.
   </p>
-  
+  <script src="https://gist.github.com/birch-jayton/eb4cc31128b6ca8878ded585a189392a.js"></script>
+  <button type="button" onclick="showFirstAnimal()">Show First Animal</button>
+  <button type="button" onclick="showClassName()">Show Class Name</button>
+  <p>Notice the distinction between how the values in a numbered index (line 13) are retrieved compared to a named index (line 18). One is called with a number (animalsInYard[0]) and one by the name assigned to the value (cit_class.name)</p>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

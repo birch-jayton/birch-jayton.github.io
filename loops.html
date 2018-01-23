@@ -92,8 +92,24 @@
   </div>
 
 
-  <p>
-  </p>
+  <p><b>Loops</b> are used to go through the same code over and over or “loop” through it. 
+  The types of loops in JavaScript are: </p>
+  <ul>
+    <li> for - loops through a block of code a number of times. </li>
+    <li> for/in - loops through the properties of an object. </li>
+    <li> while - loops through a block of code while a specified condition is true.</li>
+    <li> do/while - also loops through a block of code while a specified condition is true. </li>
+  </ul>
+  <p>Lets demonstrate this loops using the example object (class data) and array (animal list) from the last example.</p>
+  <script src="https://gist.github.com/birch-jayton/09440da1ad7a7e5d2cd4cd921221eb88.js"></script>
+  <p>To demonstrate the FOR loop we will iterate through the list of animals and whenever we come across a dog we will increment the dog_count by one. It will then display the dog count.</p>
+  <button type="button" onclick="for_loop_button_clicked()">For Loop</button>
+  <p>To demonstrate the for-in loop we will iterate through each value of the cit_class object and append it to one string then display it.</p>
+  <button type="button" onclick="forin_button_clicked()">For In</button>
+  <p>To demonstrate the while loop we will start with an integer at 0. We will add the value of that number to a string then implement it by one. This will keep appending to the string until the integer reaches 10. <b>NOTE:</b> This will be displayed in the console. To see the reult use the developer tools of your browser.</p>
+  <button type="button" onclick="while_button_clicked()">While</button>
+  <p>To demonstrate the while loop we will start with an integer at 0. We will add the value of that number to a string then implement it by one. This will keep appending to the string until the integer reaches 10. <b>NOTE:</b> This will be displayed in the console. To see the reult use the developer tools of your browser.</p>
+  <button type="button" onclick="dowhile_button_clicked()">Do While</button>
   
 </div>
 <script type="text/javascript">
