@@ -115,3 +115,24 @@ function dowhile_button_clicked() {
 	}
 	while (i < 10)
 }
+
+//Object literally created
+var my_other_course = {name:"Mobile Application Dev", code:"cit261", instructor:"Baer"}; 
+
+//Object created with constructor 
+var my_course = new Course("Database Design & Development", 225, "Bowden");
+
+//The constructor. Creates a Course Object.
+function Course(name, code, instructor) {
+	this.name = name;
+	this.code = code;
+	this.instructor = instructor;
+}
+
+//Display some info using both objects created.
+function objButton_clicked() {
+	alert("I take a class called " + my_course.name
+		+ " taught by " + my_course.instructor 
+		+ ". I also take " + my_other_course.name
+		+ " taught by " + my_other_course.instructor);
+}

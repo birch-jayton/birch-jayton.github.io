@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conditionals</title>
+	<title>Object Creation Functions</title>
 	<link rel="stylesheet" type="text/css" href="birchStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,23 +10,23 @@
 <body>
 <div class="sidenav">
   <a href="index.html">About</a>
-  <button class="dropdown-btn active_at_start">Week 2 
+  <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="variables.html">Variables</a>
     <a href="functions.html">Functions</a>
     <a href="parameters.html">Parameters</a>
-    <a class="active_child_at_start" href="conditionals.html">Conditionals</a>
+    <a href="conditionals.html">Conditionals</a>
     <a href="arrays.html">Arrays</a>
     <a href="assocArrays.html">Associative Arrays</a>
     <a href="loops.html">Loops</a>
   </div>
-  <button class="dropdown-btn">Week 3
+  <button class="dropdown-btn active_at_start">Week 3
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="objectCreationFunctions.html">Object Creation Functions</a>
+    <a class="active_child_at_start" href="objectCreationFunctions.html">Object Creation Functions</a>
     <a href="inheritance.html">Inheritance</a>
     <a href="properties.html">Properties</a>
     <a href="methods.html">Methods</a>
@@ -86,34 +86,19 @@
 </div>
 <div class="main">
   <div class="pagination lesson_header">
-    <a left href="parameters.html">❮</a>
-    <h2 class="title">Conditional Statements</h2>
-    <a right href="arrays.html">❯</a>
+    <a left href="loops.html">❮</a>
+    <h2 class="title">Object Creation Functions</h2>
+    <a right href="inheritance.html">❯</a>
   </div>
 
 
-  <p><b>Condition Statements</b> are used to perform certain actions depending on certain conditions.
-  In JavaScript there are the following conditional statements:
-  </p>
-  <ul>
-    <li>Use <b>if</b> to specify a block of code to be executed, if a specified condition is true.</li>
-    <li>Use <b>else</b> to specify a block of code to be executed, if the same condition is false.</li>
-    <li>Use <b>else if</b> to specify a new condition to test, if the first condition is false.</li>
-    <li>Use <b>switch</b> to specify many alternative blocks of code to be executed.</li>
-  </ul>
-  <p>
-    In the spirit of entering numbers. Lets create a behavior that happens on the condition that the input is what we want. Let's ask for the user to input a number and we'll suppose that 7 is my FAVORITE number. So if the number is 7 we will act a certain way. However, 3 is a close second when it comes to by favorite numbers so we will also have a behavior on the condition that the number is not 7 but 3. Then if the input is anything else we will say that the user is wrong.
-  </p>
-  Enter a Number: <input id="numInput" type="number" name="number">
-  <button type="button" onclick="verifyNumber()">Submit</button>
-  <br>
-  <p>The code:</p>
-  <script src="https://gist.github.com/birch-jayton/a7feff28c85301a4457be0512ae9133e.js"></script>
-
-
-  
-  
+  <p>In JavaScript <b>objects</b> are everywhere. As in our example of our cit_class function, objects hold values and methods that can be retrieved by calling their name. Let's say that you are making a program in which you will need various objects to represent classes like our cit_class object. Instead of creating each of these objects literally you can create a <b>constructor</b> to make these objects. Constructors are functions in which an object is created based on the values passed as parameters. Let's create a constructor so that we can make more objects to represent our other classes. We will call the object Course:</p>
+  <script src="https://gist.github.com/birch-jayton/a961fb2e0b460a3f92431bc395d32dcd.js"></script>
+  <button type="button" onclick="objButton_clicked()">Show Info</button>
+  <p>Notice that when the constuctor is called the keyword <b>new</b> is used to indicate that a new object needs to be created to assign to the variable name. Using a constuctor is handy because all of the objects created with it will have the same member variable names. So if we create 100 Course objects we know we can always call course.name to get the name. </p>
 </div>
+
+
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
