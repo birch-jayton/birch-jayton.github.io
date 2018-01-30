@@ -177,17 +177,18 @@ button {
     text-align: center;
     color: red;
 }
-table {
+
+#resultsTable {
     border-collapse: collapse;
     width: 100%;
 }
 
-td, th {
+td.results, th.results {
     border: 1px solid orange;
     text-align: left;
     padding: 8px;
 }
 
 .poster {
-    width: 50%;
+    width: 35%;
 }

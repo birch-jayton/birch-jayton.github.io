@@ -213,13 +213,56 @@ function get_movie_data_button_clicked(){
 }
 
 function displaySearchResults(jsonObj) {
-	var x;
+	//Our main body or "parent"
+	var main = document.getElementsByClassName("main")[0];
+
+	//Delete results if there exists results from a previous search
+	var previousTable = document.getElementById("resultsTable");
+	if (previousTable != null) {
+		main.removeChild(previousTable);
+	}
+
+	//Create the table 
+	var table = document.createElement("table");
+	table.setAttribute("id", "resultsTable");
+
+	//Create the first row
+	var titleRow = document.createElement("tr");
+	titleRow.classList.add("results");
+
+	//Create title element
+	var titleColElem = document.createElement("th");
+	titleColElem.classList.add("results");
+	var titleColNode = document.createTextNode("Title");
+	titleColElem.appendChild(titleColNode);
+	titleRow.appendChild(titleColElem);
+
+	//Create year element
+	var yearColElem = document.createElement("th");
+	yearColElem.classList.add("results");
+	var yearColNode = document.createTextNode("Year");
+	yearColElem.appendChild(yearColNode)
+	titleRow.appendChild(yearColElem);
+
+	//Create Poster element
+	var posterColElem = document.createElement("th");
+	posterColElem.classList.add("results");
+	var posterColNode = document.createTextNode("Poster");
+	posterColElem.appendChild(posterColNode);
+	titleRow.appendChild(posterColElem);
+
+	//add row to table
+	table.appendChild(titleRow);
+
+
 	for (var i = 0; i < jsonObj.Search.length; i++) {
 		//create row element
 		var myRow = document.createElement("tr");
+		myRow.classList.add("results");
 
 		//create and add element for title 
 		var titleElem = document.createElement("th");
+		titleElem.classList.add("results");
 		var titleNode = document.createTextNode(jsonObj.Search[i].Title);
 		titleElem.appendChild(titleNode);
 
@@ -228,6 +271,7 @@ function displaySearchResults(jsonObj) {
 
 		//create and add element for year
 		var yearElem = document.createElement("th");
+		yearElem.classList.add("results");
 		var yearNode = document.createTextNode(jsonObj.Search[i].Year);
 		yearElem.appendChild(yearNode);
 
@@ -236,6 +280,7 @@ function displaySearchResults(jsonObj) {
 
 		//create element for poster image
 		var posterElem = document.createElement("th");
+		posterElem.classList.add("results");
 		var imageElem = document.createElement("img");
 		imageElem.src = jsonObj.Search[i].Poster;
 		imageElem.classList.add("poster");
@@ -246,8 +291,10 @@ function displaySearchResults(jsonObj) {
 
 
 		//add row to table
-		document.getElementById("resultsTable").appendChild(myRow);
+		table.appendChild(myRow);
 	}
-	
 
+	//Add table to Document
+	placeBeforeThis = document.getElementById("resultExplanation");
+	main.insertBefore(table, placeBeforeThis);
 }
