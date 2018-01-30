@@ -194,6 +194,6 @@ function get_movie_data_button_clicked(){
 			console.log(this.resposeText)
 		}
 	}
-	xhttp.open("GET", "http://www.omdbapi.com/?apikey=39ebc70b&s=thor", true)
+	xhttp.open("GET", "https://www.omdbapi.com/?apikey=39ebc70b&s=thor", true)
 	xhttp.send();
 }
