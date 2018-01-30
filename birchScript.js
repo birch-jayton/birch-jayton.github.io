@@ -215,11 +215,36 @@ function get_movie_data_button_clicked(){
 function displaySearchResults(jsonObj) {
 	var x;
 	for (var i = 0; i < jsonObj.Search.length; i++) {
+		//create row element
 		var myRow = document.createElement("tr");
+
+		//create and add element for title 
 		var titleElem = document.createElement("th");
 		var titleNode = document.createTextNode(jsonObj.Search[i].Title);
 		titleElem.appendChild(titleNode);
+
+		//add title element to the row
 		myRow.appendChild(titleElem);
+
+		//create and add element for year
+		var yearElem = document.createElement("th");
+		var yearNode = document.createTextNode(jsonObj.Search[i].Year);
+		yearElem.appendChild(yearNode);
+
+		//add year element to row
+		myRow.appendChild(yearElem);
+
+		//create element for poster image
+		var posterElem = document.createElement("th");
+		var imageElem = document.createElement("img");
+		imageElem.src = jsonObj.Search[i].Poster;
+		posterElem.appendChild(imageElem);
+
+		//add poster to row
+		myRow.appendChild(posterElem);
+
+
+		//add row to table
 		document.getElementById("resultsTable").appendChild(myRow);
 	}
 	
