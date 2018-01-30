@@ -220,6 +220,7 @@ function displaySearchResults(jsonObj) {
 		var titleNode = document.createTextNode(jsonObj.Search[i].Title);
 		titleElem.appendChild(titleNode);
 		myRow.appendChild(titleElem);
+		document.getElementById("resultsTable").appendChild(myRow);
 	}
 	
 
