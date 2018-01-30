@@ -191,7 +191,7 @@ function get_movie_data_button_clicked(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status ==200) {
-			var jsonObj = JSON.parse(this.resposeText);
+			var jsonObj = JSON.parse(this.responseText);
 			console.log(jsonObj);
 		}
 	}
