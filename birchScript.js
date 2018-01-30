@@ -201,6 +201,7 @@ function get_movie_data_button_clicked(){
 		if (this.readyState == 4 && this.status ==200) {
 			var jsonObj = JSON.parse(this.responseText);
 			console.log(jsonObj);
+			displaySearchResults(jsonObj);
 		}
 	}
 
@@ -209,4 +210,14 @@ function get_movie_data_button_clicked(){
 
 	//Send request
 	xhttp.send();
+}
+
+function displaySearchResults(jsonObj) {
+	var x;
+	for (x in jsonObj.Search) {
+		console.log("Movie Title: " + x.Title)
+	}
+	var myRow = document.createElement("tr");
+	var titleElem = document.createElement("th");
+
 }

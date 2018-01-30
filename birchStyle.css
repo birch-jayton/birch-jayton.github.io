@@ -177,3 +177,13 @@ button {
     text-align: center;
     color: red;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid orange;
+    text-align: left;
+    padding: 8px;
+}
