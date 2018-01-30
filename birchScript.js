@@ -215,9 +215,12 @@ function get_movie_data_button_clicked(){
 function displaySearchResults(jsonObj) {
 	var x;
 	for (var i = 0; i < jsonObj.Search.length; i++) {
-		console.log(jsonObj.Search[i].Title);
+		var myRow = document.createElement("tr");
+		var titleElem = document.createElement("th");
+		var titleNode = document.createTextNode(jsonObj.Search[i].Title);
+		titleElem.appendChild(titleNode);
+		myRow.appendChild(titleElem);
 	}
-	var myRow = document.createElement("tr");
-	var titleElem = document.createElement("th");
+	
 
 }
