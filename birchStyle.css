@@ -187,3 +187,7 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+
+.poster {
+    width: 50%;
+}

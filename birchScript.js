@@ -238,6 +238,7 @@ function displaySearchResults(jsonObj) {
 		var posterElem = document.createElement("th");
 		var imageElem = document.createElement("img");
 		imageElem.src = jsonObj.Search[i].Poster;
+		imageElem.classList.add("poster");
 		posterElem.appendChild(imageElem);
 
 		//add poster to row
