@@ -186,3 +186,14 @@ function change_text_button_clicked() {
 	xhttp.open("GET", "textExample.txt", true)
 	xhttp.send();
 }
+
+function get_movie_data_button_clicked(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status ==200) {
+			console.log(this.resposeText)
+		}
+	}
+	xhttp.open("GET", "http://www.omdbapi.com/?apikey=39ebc70b&s='thor'", true)
+	xhttp.send();
+}

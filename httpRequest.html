@@ -97,7 +97,12 @@
   <p>This is a very basic example of AJAX. We will retrieve data from another file on this server and change the webpage to display it. CLick the "Change Text Button" and what the request happen.</p>
   <p class="changableText" id="textToChange">This text will change</p>
   <button type="button" onclick="change_text_button_clicked()">Change Text</button>
-  
+  <br>
+  <p>This is the function that runs when you click the button:</p>
+  <script src="https://gist.github.com/birch-jayton/89882313dee69081775ccd4d19577d4f.js"></script>
+  <p>We don't have to define the XMLHttpRequest object because it is built into the browser so we just instantiate it. We then modify the object to our need.</p>
+  <p>Notice the numbers in the if/then statement. HTTP servers return status codes (I am sure we are all familiar with the common 404-Not Found response when browsing old websites). The "200" status code is the "OK" code definition meaning the request has succeeded. For a list of all HTTP status codes and their definitions <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Click Here</a>. The readyState is a property of the XMLHttpRequestObject that holds the status of the object. We check if it is "4" because that means the requst is finished.</p>
+  <button type="button" onclick="get_movie_data_button_clicked()">Get movie data</button>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
