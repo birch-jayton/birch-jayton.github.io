@@ -189,7 +189,7 @@ function change_text_button_clicked() {
 
 function get_movie_data_button_clicked(){
 	//Get movie title from user input
-	var movieTitle = document.getElementById("movieInput");
+	var movieTitle = document.getElementById("movieInput").value;
 
 	//Create the URL with the title as a parameter
 	var url = "https://www.omdbapi.com/?apikey=39ebc70b&s=" + movieTitle;
