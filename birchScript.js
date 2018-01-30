@@ -191,7 +191,8 @@ function get_movie_data_button_clicked(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status ==200) {
-			console.log(JSON.parse(this.resposeText));
+			var jsonObj = JSON.parse(this.resposeText);
+			console.log(jsonObj);
 		}
 	}
 	xhttp.open("GET", "https://www.omdbapi.com/?apikey=39ebc70b&s=thor", true)
