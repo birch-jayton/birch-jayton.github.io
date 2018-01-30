@@ -92,7 +92,11 @@
   </div>
 
 
-  <p></p>
+  <p>Browsers utilize a <b>XMLHttpRequest</b> object that can be used to get data from a server. This can be used for many things. You can use a RESTful API if you want to call data from a server and have it return a JSON object (an example of this would be getting the latest tweets from a user on Twitter and displaying it on your website using the Twitter API). You can also dynamically change a page with information from a different server without the user having to reload the browser. This practice is called <b>AJAX</b>.</p>
+  <h2>Ajax</h2>
+  <p>This is a very basic example of AJAX. We will retrieve data from another file on this server and change the webpage to display it. CLick the "Change Text Button" and what the request happen.</p>
+  <p class="changableText" id="textToChange">This text will change</p>
+  <button type="button" onclick="change_text_button_clicked()">Change Text</button>
   
 </div>
 <script type="text/javascript">

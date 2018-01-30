@@ -173,3 +173,16 @@ function properties_button_clicked(){
 	//Display the data
 	alert(myCourse.display());
 }
+
+//Runs when change text button is clicked
+function change_text_button_clicked() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status ==200) {
+			document.getElementById("textToChange").innerHTML =
+			this.responseText;
+		}
+	}
+	xhttp.open("GET", "textExample.txt", true)
+	xhttp.send();
+}
