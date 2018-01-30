@@ -102,7 +102,10 @@
   <script src="https://gist.github.com/birch-jayton/89882313dee69081775ccd4d19577d4f.js"></script>
   <p>We don't have to define the XMLHttpRequest object because it is built into the browser so we just instantiate it. We then modify the object to our need.</p>
   <p>Notice the numbers in the if/then statement. HTTP servers return status codes (I am sure we are all familiar with the common 404-Not Found response when browsing old websites). The "200" status code is the "OK" code definition meaning the request has succeeded. For a list of all HTTP status codes and their definitions <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Click Here</a>. The readyState is a property of the XMLHttpRequestObject that holds the status of the object. We check if it is "4" because that means the requst is finished.</p>
-  <button type="button" onclick="get_movie_data_button_clicked()">Get movie data</button>
+  <h2>XMLHttpRequest with a JSON Web Service</h2>
+  <p>We can also use the XMLHttpRequest object to get XML or JSON as a response from another server. This opens up many opportunities to use data from other services in your own application. For this example let's use <a href="http://www.omdbapi.com/">The Open Movie Database</a> API to let the user search for a movie and display some results.</p>
+  Enter a movie title: <input type="text" id="movieInput">
+  <button type="button" onclick="get_movie_data_button_clicked()">Search Movies</button>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

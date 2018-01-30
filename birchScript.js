@@ -188,6 +188,14 @@ function change_text_button_clicked() {
 }
 
 function get_movie_data_button_clicked(){
+	//Get movie title from user input
+	var movieTitle = document.getElementById("movieInput");
+
+	//Create the URL with the title as a parameter
+	var url = "https://www.omdbapi.com/?apikey=39ebc70b&s=" + movieTitle;
+	
+	//Instantiate a XMLHttpRequest objext and define 
+	//    the onreadystatechange function
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status ==200) {
@@ -195,6 +203,10 @@ function get_movie_data_button_clicked(){
 			console.log(jsonObj);
 		}
 	}
-	xhttp.open("GET", "https://www.omdbapi.com/?apikey=39ebc70b&s=thor", true)
+
+	//Add request type and URL
+	xhttp.open("GET", url, true)
+
+	//Send request
 	xhttp.send();
 }
