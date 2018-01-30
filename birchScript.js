@@ -214,8 +214,8 @@ function get_movie_data_button_clicked(){
 
 function displaySearchResults(jsonObj) {
 	var x;
-	for (x in jsonObj.Search) {
-		console.log("Movie Title: " + x.Title)
+	for (var i = 0; i < jsonObj.Search.length; i++) {
+		console.log(jsonObj.Search[i].Title);
 	}
 	var myRow = document.createElement("tr");
 	var titleElem = document.createElement("th");
