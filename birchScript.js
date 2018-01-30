@@ -136,3 +136,40 @@ function objButton_clicked() {
 		+ ". I also take " + my_other_course.name
 		+ " taught by " + my_other_course.instructor);
 }
+
+function protoButton_clicked(){
+	var my_course_1 = new Course("Mobile Application Dev", 261, "Baer");
+
+	Course.prototype.time = "Wed 2:30";
+
+	Course.prototype.display = function() {
+		var output;
+		output = this.name + " " + String(this.code) + " " + this.instructor + " " + this.time;
+		return output;
+	}
+
+	alert(my_course_1.display());
+}
+Course.prototype.display = function() {
+		var output;
+		output = this.name + " " + String(this.code) + " " + this.instructor + " " + this.time;
+		return output;
+	}
+//The function that is called upon clicking the 
+//    Create Course Button
+function properties_button_clicked(){
+	//Get input from the user
+	var courseName       = document.getElementById("courseNameInput").value;
+	var courseCode       = document.getElementById("courseCodeInput").value;
+	var courseInstructor = document.getElementById("courseInstructorInput").value;
+	var courseTime       = document.getElementById("courseTimeInput").value;
+	
+	//Create the object with constructor
+	var myCourse = new Course(courseName, courseCode, courseInstructor);
+	
+	// Add course time (this is not part of the constructor)
+	myCourse.time = courseTime;
+	
+	//Display the data
+	alert(myCourse.display());
+}

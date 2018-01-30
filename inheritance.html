@@ -92,9 +92,11 @@
   </div>
 
 
-  <p></p>
- 
-  
+  <p> A <b>prototype</b> is to an Object as a cookie cutter is to a cookie. All objects inherit properties from their prototype. If your cookie cutter looks like a gingerbread-man with little arms, your cookies will look like that too. If you want to change how your cookies look you must modify the cookie cutter. Similarly, if you want to add new properties to a type of object or to its constructor you must modify the prototype.</p>
+  <p>To demonstrate this, let's use the Course object we used previously and add a "time" value to show what time the class is. We will also add a function to display all of the data of the course.</p>
+  <button type="button" onclick="protoButton_clicked()">Show Info</button>
+  <script src="https://gist.github.com/birch-jayton/45221354afa2b1fc3a01ec8de39075cd.js"></script>
+  <p>Now we can add a time property when we use this Object in the future to create more courses. We can also use the display() function to get all the info in one string if we want to display it.</p>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

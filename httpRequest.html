@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Properties</title>
+	<title>Instantiation</title>
 	<link rel="stylesheet" type="text/css" href="birchStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,21 +22,21 @@
     <a href="assocArrays.html">Associative Arrays</a>
     <a href="loops.html">Loops</a>
   </div>
-  <button class="dropdown-btn active_at_start">Week 3
+  <button class="dropdown-btn">Week 3
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="objectCreationFunctions.html">Object Creation Functions</a>
     <a href="inheritance.html">Inheritance</a>
-    <a class="active_child_at_start" href="properties.html">Properties</a>
+    <a href="properties.html">Properties</a>
     <a href="methods.html">Methods</a>
     <a href="instantiation.html">Instantiation</a>
   </div>
-  <button class="dropdown-btn">Week 4
+  <button class="dropdown-btn active_at_start">Week 4
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Using XMLHTTPRequest</a>
+    <a class="active_child_at_start" href="httpRequest.html">Using XMLHTTPRequest</a>
   </div>
   <button class="dropdown-btn">Week 5 
     <i class="caret material-icons">expand_more</i>
@@ -86,19 +86,13 @@
 </div>
 <div class="main">
   <div class="pagination lesson_header">
-    <a left href="inheritance.html">❮</a>
-    <h2 class="title">Properties</h2>
-    <a right href="methods.html">❯</a>
+    <a left href="instantiation.html">❮</a>
+    <h2 class="title">Using XMLHTTPRequest</h2>
+    <a right href="#">❯</a>
   </div>
 
-  <p>Every object has <b>properties</b> associated with it. Each has a name and a value. These values can be hardcoded or dynamically added or changed. Properties are commonly defined with when the objects are created with constructors. We have already used properties in previous examples. Each value associated with our Course object, like the course name, is a property. Let's review this by creating an object with specified properties you can input.</p>
-  Enter Course Name:<input id="courseNameInput" type="text"><br>
-  Enter Course Code:<input id="courseCodeInput" type="text"><br>
-  Enter Instructor Name:<input id="courseInstructorInput" type="text"><br>
-  Enter Class Time:<input id="courseTimeInput" type="text"><br>
-  <button type="button" onclick="properties_button_clicked()">Create Course Object</button>
-  <script src="https://gist.github.com/birch-jayton/fea14b691df916bf2ff3e6eef692dfe0.js"></script>
-  <p>Notice that the course name, code, and instructor values are passed to the constructor to create the object while the time value is added explicitly. This is because we added the time value to the prototype after creating the constructor. After the constructor is made we cannot modify it.</p>
+
+  <p></p>
   
 </div>
 <script type="text/javascript">
