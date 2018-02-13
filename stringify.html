@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Parameters</title>
+	<title>Stringify</title>
 	<link rel="stylesheet" type="text/css" href="birchStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,13 +10,13 @@
 <body>
 <div class="sidenav">
   <a href="index.html">About</a>
-  <button class="dropdown-btn active_at_start">Week 2 
+  <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="variables.html">Variables</a>
     <a href="functions.html">Functions</a>
-    <a class="active_child_at_start" href="parameters.html">Parameters</a>
+    <a href="parameters.html">Parameters</a>
     <a href="conditionals.html">Conditionals</a>
     <a href="arrays.html">Arrays</a>
     <a href="assocArrays.html">Associative Arrays</a>
@@ -38,7 +38,7 @@
   <div class="dropdown-container">
     <a href="httpRequest.html">Using XMLHTTPRequest</a>
   </div>
-  <button class="dropdown-btn">Week 5 
+  <button class="dropdown-btn active_at_start">Week 5 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
@@ -87,26 +87,17 @@
 
 <div class="main">
   <div class="pagination lesson_header">
-    <a left href="functions.html">❮</a>
-    <h2 class="title">Parameters</h2>
-    <a right href="conditionals.html">❯</a>
+    <a left href="instantiation.html">❮</a>
+    <h2 class="title">Stringify/Parse</h2>
+    <a right href="#">❯</a>
   </div>
-
-
-  <p>
-    <b>Parameters</b> or arguments are the values that a function has to start with to begin their logic. A variable can be passed to a function in the parenthesis following the name of the function. A function with parameters passed to it has already been used in the previous examples. That is the alert() function. The value in the parenthesis is what is alerted to the screen. 
-    <br>
-    In the last example, the addTwo function had logic that consisted of getting the value of the textbox directly from the document. Let’s change it to add two to the number that is passed to it as a parameter and have it return the value.
+  <p>In order to convert a JavaScript object to a plain string of JSON we use the JSON.stringify() function. This string can then be used to send to another server so that the server can interpret it as an Object. Let’s demonstrate this by taking our cit_class JavaScript object that we have been using and displaying it as a string of text in an alert.
   </p>
-<h2>Example</h2>
-Enter a Number: <input id="numInput" type="number" name="number">
-<button type="button" onclick="addTwoClicked_2()">Add 2</button>
-<p>
-  Notice how the behavior is almost identical to the last example, but let’s look at what is different in the function:
+  <script src="https://gist.github.com/birch-jayton/c4b24463ba7edb5c11a7aa828fbe46e9.js"></script>
+  <button type="button" onclick="displayObj()">Show object as JSON string</button>
+  <p>We can use that string to send it somewhere. So what is a developer supposed to do when receiving a string like this? We can convert the JSON to be a regular JavaScript Object by having the interpreter parse the text and create the object. This is done with the JSON.parse() function. We did this previously in our Using XMLHTTPRequest lesson when we got JSON back from the database. In order to use this information as an object we parsed it and put the data into a table. <script src="https://gist.github.com/birch-jayton/4575006b4ad575708b1f665da6b2450b.js"></script> <a href="httpRequest.html">Click here to see this example in action again.</a>
+
 </p>
-<script src="https://gist.github.com/birch-jayton/bc5ad4974d67c73dc1f6acf75b514582.js"></script>
-<p>Whereas the previous addTwo function got the enteredNumber variable from a very specific place, this function gets a number passed to it as a parameter. That means that this function can be used repeatedly and for different reasons. </p>
-  
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

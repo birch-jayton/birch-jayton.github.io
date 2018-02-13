@@ -298,3 +298,14 @@ function displaySearchResults(jsonObj) {
 	placeBeforeThis = document.getElementById("resultExplanation");
 	main.insertBefore(table, placeBeforeThis);
 }
+
+function displayObj() {
+	//Declare and define our object
+	var cit_class = {name:"Mobile Application Dev", code:"cit261", instructor:"Baer"};
+
+	//Turn the object into a string of JSON
+	var myJSON = JSON.stringify(cit_class);
+
+	//Display the string
+	alert(myJSON);
+}

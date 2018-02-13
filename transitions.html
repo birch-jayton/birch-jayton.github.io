@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Parameters</title>
+	<title>Transitions</title>
 	<link rel="stylesheet" type="text/css" href="birchStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,14 +9,14 @@
 </head>
 <body>
 <div class="sidenav">
-  <a href="index.html">About</a>
-  <button class="dropdown-btn active_at_start">Week 2 
+  <a class="active_child_at_start" href="index.html">About</a>
+  <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="variables.html">Variables</a>
     <a href="functions.html">Functions</a>
-    <a class="active_child_at_start" href="parameters.html">Parameters</a>
+    <a href="parameters.html">Parameters</a>
     <a href="conditionals.html">Conditionals</a>
     <a href="arrays.html">Arrays</a>
     <a href="assocArrays.html">Associative Arrays</a>
@@ -27,7 +27,7 @@
   </button>
   <div class="dropdown-container">
     <a href="objectCreationFunctions.html">Object Creation Functions</a>
-    <a href="inheritance.html">Inheritance</a>
+    <a href="inheritence.html">Inheritance</a>
     <a href="properties.html">Properties</a>
     <a href="methods.html">Methods</a>
     <a href="instantiation.html">Instantiation</a>
@@ -84,28 +84,15 @@
     <a href="animations.html">Animations</a>
   </div>
 </div>
-
 <div class="main">
   <div class="pagination lesson_header">
-    <a left href="functions.html">❮</a>
-    <h2 class="title">Parameters</h2>
-    <a right href="conditionals.html">❯</a>
+    <a left href="tags.html">❮</a>
+    <h2 class="title">Transitions</h2>
+    <a right href="transforms.html">❯</a>
   </div>
 
+<p>Coming Soon</p>
 
-  <p>
-    <b>Parameters</b> or arguments are the values that a function has to start with to begin their logic. A variable can be passed to a function in the parenthesis following the name of the function. A function with parameters passed to it has already been used in the previous examples. That is the alert() function. The value in the parenthesis is what is alerted to the screen. 
-    <br>
-    In the last example, the addTwo function had logic that consisted of getting the value of the textbox directly from the document. Let’s change it to add two to the number that is passed to it as a parameter and have it return the value.
-  </p>
-<h2>Example</h2>
-Enter a Number: <input id="numInput" type="number" name="number">
-<button type="button" onclick="addTwoClicked_2()">Add 2</button>
-<p>
-  Notice how the behavior is almost identical to the last example, but let’s look at what is different in the function:
-</p>
-<script src="https://gist.github.com/birch-jayton/bc5ad4974d67c73dc1f6acf75b514582.js"></script>
-<p>Whereas the previous addTwo function got the enteredNumber variable from a very specific place, this function gets a number passed to it as a parameter. That means that this function can be used repeatedly and for different reasons. </p>
   
 </div>
 <script type="text/javascript">
