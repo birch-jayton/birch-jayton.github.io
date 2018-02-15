@@ -7,9 +7,9 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="birchScript.js"></script>
 </head>
-<body>
+<body onload="loadApiPage()">
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -45,11 +45,11 @@
     <a href="json.html">JSON</a>
     <a href="stringify.html">Stringify</a>
   </div>
-  <button class="dropdown-btn">Week 6 
+  <button class="dropdown-btn active_at_start">Week 6 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="localapi.html">Local Storage API</a>
+    <a class="active_child_at_start" href="localapi.html">Local Storage API</a>
     <a href="storingSimpleData.html">Storing and Retrieving Simple Data</a>
     <a href="arraysApi.html">Arrays</a>
     <a href="assocArraysApi.html">Associative Arrays</a>
@@ -91,8 +91,17 @@
     <a right href="storingSimpleData.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
-  
+<p>There are many ways to store data with HTML and JavaScript utilizing the users browser. <b>Session Storage</b> holds data for the duration of the session, or until the user clicks away and closes the browser. <b>Local Storage</b> has no expiration date and data persists after the browser is closed. This functionality can be very handy. It can save the shipping information of a customer so they don’t have to enter it in each time they buy something. It can remember if a user is authorized and remember who they are. It can even save the high scores of users of an in browser game. To demonstrate this, the page will ask you for your name. Enter it and click “Remember Me”. Then, most importantly, close your browser and go back to this webpage. Your name will still be there! 
+</p>
+First Name<input type="text" id="firstName"><br>
+Last Name<input type="text" id="lastName"><br>
+<button type="button" onclick="rememberName()">Remember Me!</button>
+<h2 id="nameDisplay" class="changableText">(Your name goes here)</h2>
+<p>Close the browser and come back. Did it remember you? This is how we added it to local storage</p>
+<script src="https://gist.github.com/birch-jayton/6f07a5f8779b3282f0a7f2177366b887.js"></script>
+<p>Because the properties of the localStorage object NEVER get deleted by themselves, if you want to delete it you must add functionality to remove it with the removeItem() function. Click the "Forget Me!" button to see it work.</p>
+<button type="button" onclick="forgetName()">Forget Me!</button>
+<script src="https://gist.github.com/birch-jayton/a7c28badc0f57c9e05a9c0a80b12fb82.js"></script>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

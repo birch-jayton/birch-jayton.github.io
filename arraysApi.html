@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -45,13 +45,13 @@
     <a href="json.html">JSON</a>
     <a href="stringify.html">Stringify</a>
   </div>
-  <button class="dropdown-btn">Week 6 
+  <button class="dropdown-btn  active_at_start">Week 6 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="localapi.html">Local Storage API</a>
     <a href="storingSimpleData.html">Storing and Retrieving Simple Data</a>
-    <a href="arraysApi.html">Arrays</a>
+    <a class="active_child_at_start" href="arraysApi.html">Arrays</a>
     <a href="assocArraysApi.html">Associative Arrays</a>
     <a href="objectsApi.html">Objects</a>
   </div>
@@ -91,7 +91,11 @@
     <a right href="assocArraysApi.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
+<p>The storage objects are just that, objects. To store an array in local storage it will be nested in the object as it would any other object. The array can then be retrieved by calling upon its name.</p>
+<p>IN this case we will create an array of strings that represent the type of pets the user has had in the past. We will save this list as "pets". We will then retrieve it.</p>
+<script src="https://gist.github.com/birch-jayton/ab0ab51ace51065f69e7ea750fc12c7b.js"></script>
+<br>
+<button type="button" onclick="displayArrayfromLocalStorage()">Show Array</button>
 
   
 </div>

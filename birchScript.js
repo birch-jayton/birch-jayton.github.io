@@ -309,3 +309,61 @@ function displayObj() {
 	//Display the string
 	alert(myJSON);
 }
+
+function rememberName(){
+	var firstName = document.getElementById("firstName").value;
+	var lastName = document.getElementById("lastName").value;
+	if (typeof(Storage) !== "undefined") {
+		localStorage.firstName = firstName;
+		localStorage.lastName = lastName;
+	} else {
+		alert("This example won't work because your browser doesn't support web storage.");
+	}
+	loadApiPage();
+}
+
+function forgetName(){
+	localStorage.removeItem("firstName");
+	localStorage.removeItem("lastName");
+	loadApiPage();
+}
+
+function loadApiPage() {
+	if (localStorage.firstName !== undefined) {
+		var fullName = localStorage.firstName + " " + localStorage.lastName;
+		document.getElementById("nameDisplay").innerHTML = fullName;
+	} else {
+		document.getElementById("nameDisplay").innerHTML = "(Your name here)"
+	}
+}
+
+function displayArrayfromLocalStorage() {
+	// an array of pets I have previously owned 
+	var pets = 	["dog", "cat", "hamster", "otter", "cat"];
+
+	//Add the array to local storage
+	localStorage.animalList = pets;
+
+	//Retrieve it
+	console.log(localStorage);
+	alert(localStorage.animalList);
+}
+
+function displayObjectFromLocalStorage() {
+	//Create a JS object
+	var student = {name: "Jayton", major: "Software Engineering", 
+					desiredInternship: "Walmart"};
+
+	//Store data to local storage
+	localStorage.setItem("student", JSON.stringify(student));
+	
+	//Retreive it again
+	var newStudent =JSON.parse(localStorage.getItem('student'))
+
+	//get variables you want
+	var studentName = newStudent.name;
+	var desiredInternship = newStudent.desiredInternship;
+
+	//Display a message from Stored Data
+	alert(studentName + " wants to intern at " + desiredInternship);
+}

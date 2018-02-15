@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -45,12 +45,12 @@
     <a href="json.html">JSON</a>
     <a href="stringify.html">Stringify</a>
   </div>
-  <button class="dropdown-btn">Week 6 
+  <button class="dropdown-btn active_at_start">Week 6 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="localapi.html">Local Storage API</a>
-    <a href="storingSimpleData.html">Storing and Retrieving Simple Data</a>
+    <a class="active_child_at_start" href="storingSimpleData.html">Storing and Retrieving Simple Data</a>
     <a href="arraysApi.html">Arrays</a>
     <a href="assocArraysApi.html">Associative Arrays</a>
     <a href="objectsApi.html">Objects</a>
@@ -91,8 +91,12 @@
     <a right href="arraysApi.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
-  
+<p>Storing and receiving simple data was explored in the <a href="localapi.html">last lesson</a>. But lets look at some more details of storing and getting data. There are different ways to approach the syntax. In our example of remembering names we wrote "localStorage.firstName = firstName;"</p>
+<script src="https://gist.github.com/birch-jayton/6f07a5f8779b3282f0a7f2177366b887.js"></script>
+<p>It can also be written as "localStorage.setElement("firstName", firstName);" Notice the difference on lines 5 and 6 between the two snippets.</p>
+<script src="https://gist.github.com/birch-jayton/92fb7bcd6887188a31246fc3dcda7795.js"></script>
+
+
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
