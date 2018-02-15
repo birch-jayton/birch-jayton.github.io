@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -55,11 +55,11 @@
     <a href="assocArraysApi.html">Associative Arrays</a>
     <a href="objectsApi.html">Objects</a>
   </div>
-  <button class="dropdown-btn">Week 7
+  <button class="dropdown-btn active_at_start">Week 7
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="domManipulation.html">DOM Manipulation</a>
+    <a class="active_child_at_start" href="domManipulation.html">DOM Manipulation</a>
     <a href="cssAndJs.html">Manipulating CSS Class Properties Using JavaScript</a>
   </div>
   <button class="dropdown-btn">Week 8 
@@ -87,12 +87,21 @@
 <div class="main">
   <div class="pagination lesson_header">
     <a left href="objectsApi.html">❮</a>
-    <h2 class="title">DOM manipulation</h2>
+    <h2 class="title">DOM Manipulation</h2>
     <a right href="cssAndJs.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
-
+<p>The HTML <b>DOM</b> or Document Object Model is the scheme in which HTML is organized and what JavaScript accesses to manipulate the document. The DOM is organized like a tree with “root” elements that have appending elements off of them or “parent” elements with subsequent “child” elements.</p>
+<h2>Fetching Elements</h2>
+<p>One of its most common uses is to allow JavaScript to access elements of the document object, or nodes on the tree. One way this can be done is by assigning an <b>id</b> to an element and calling the document.getElementById() function to get that element directly. We did this in every previous example in which user input needed to be collected from an "input" element.</p>
+<p>Here is the most basic example of getting the innerHTML of an element that we used in the <a href="variables.html">first lesson</a>.</p>
+Enter name: <input id="nameInput" type="text" name="fname">
+<button type="button" onclick="displayName()">Submit</button>
+<script src="https://gist.github.com/birch-jayton/b7f18a8769dfce48873ea71949550395.js"></script>
+<p>In the HTML, I gave the input an id of "nameInput". That way, I can directy get the element I want by calling its id.</p>
+<h2>Adding Elements</h2>
+You can create and append new elements to the DOM using JavaScript. Let's demonstrate this by adding an element in order to display text just below the following title text. 
+<h3 id=exampleTitle >Add text below this</h3>
   
 </div>
 <script type="text/javascript">

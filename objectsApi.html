@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -45,7 +45,7 @@
     <a href="json.html">JSON</a>
     <a href="stringify.html">Stringify</a>
   </div>
-  <button class="dropdown-btn">Week 6 
+  <button class="dropdown-btn active_at_start">Week 6 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
@@ -53,7 +53,7 @@
     <a href="storingSimpleData.html">Storing and Retrieving Simple Data</a>
     <a href="arraysApi.html">Arrays</a>
     <a href="assocArraysApi.html">Associative Arrays</a>
-    <a href="objectsApi.html">Objects</a>
+    <a class="active_child_at_start" href="objectsApi.html">Objects</a>
   </div>
   <button class="dropdown-btn">Week 7
     <i class="caret material-icons">expand_more</i>
@@ -91,7 +91,10 @@
     <a right href="domManipulation.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
+<p>Javascript <b> Objects </b> can be added to localStorage just like any other value as I demonstrated in the <a href="assocArraysApi.html"> last lesson </a> about associative arrays. Storing data to local storage means we move data from one place to another via an API. This means that we cannot send JavaScript objects *as is* but they must be sent as text using the <a href=stringify.html> stringify </a> method as we discussed earlier. Let’s look at our previous example of a “student” object. In order to store it we stringify it. To retrieve it and convert it to an object we parse it.
+</p>
+<script src="https://gist.github.com/birch-jayton/a35281e2a7cf07ac469b4e07975154d0.js"></script>
+<button type="button" onclick="displayObjectFromLocalStorage()">Show Object Property</button>
   
 </div>
 <script type="text/javascript">
