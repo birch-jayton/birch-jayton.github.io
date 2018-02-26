@@ -367,3 +367,54 @@ function displayObjectFromLocalStorage() {
 	//Display a message from Stored Data
 	alert(studentName + " wants to intern at " + desiredInternship);
 }
+
+function addTextAboveTitle() {
+	//Get element of main body if the page
+	var mainList = document.getElementsByClassName("main");
+	var main = mainList[0];
+
+	//Get original title element
+	var titleText = document.getElementById("exampleTitle");
+
+	//create text node
+	var myTextNode = document.createTextNode("I added this element with JavaScript!");
+
+	//create element
+	var myTitleElement = document.createElement("h4");
+
+	//append text node to title element
+	myTitleElement.appendChild(myTextNode);
+
+	//insert new element above original title text
+	main.insertBefore(myTitleElement, titleText);
+}
+
+function deleteTitleText(){
+	//Get element of main body if the page
+	var mainList = document.getElementsByClassName("main");
+	var parent = mainList[0];
+
+	//Get title to delete
+	var child = document.getElementById("textToDelete");
+
+	//Delete child from parent
+	parent.removeChild(child);
+}
+
+function changeElementStyle() {
+	//Get element to modify
+	var myElement = document.getElementById("textToModify");
+
+	//Get color value from input
+	var myColor = document.getElementById("text-color").value;
+
+	//Get text size from input
+	//myTextSize = document.getElementById("font-size").value;
+	//myTextSize = myTextSize.toString() + "%";
+
+	//Set element color
+	myElement.style.color = myColor
+
+	//Set element text size
+	//myElement.style.font-size = myTextSize;
+}

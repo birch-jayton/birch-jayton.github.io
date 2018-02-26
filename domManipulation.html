@@ -100,9 +100,18 @@ Enter name: <input id="nameInput" type="text" name="fname">
 <script src="https://gist.github.com/birch-jayton/b7f18a8769dfce48873ea71949550395.js"></script>
 <p>In the HTML, I gave the input an id of "nameInput". That way, I can directy get the element I want by calling its id.</p>
 <h2>Adding Elements</h2>
-You can create and append new elements to the DOM using JavaScript. Let's demonstrate this by adding an element in order to display text just below the following title text. 
-<h3 id=exampleTitle >Add text below this</h3>
-  
+<p>You can create and append new elements to the DOM using JavaScript. Let's demonstrate this by adding an element in order to display text just above the following title text.</p>
+<h4 id=exampleTitle >Add text above this</h4>
+<button type="button" onclick="addTextAboveTitle()">Add Text</button>
+<p>It can add the element created in the function a limitless amount of times. Try clickin it a few times. This is what it looks like:</p>
+<script src="https://gist.github.com/birch-jayton/d0b4e6c7ea9c1f3f44ea272f3dcf3d1c.js"></script>
+<p>In that function I got elements by class name and id. Note that they are very similar in function particularly when it comes to CSS. But in JavaScript, .getElementsByClassName() returns an array of elements with that class name while document.getElementById() just returns the single element.</p>
+<h2>Deleting Elements</h2>
+<p>JavaScript can also be used to delete elements.</p>
+<h4 id="textToDelete">Delete This Text</h4>
+<button type="button" onclick="deleteTitleText()">Delete Text</button>
+<p>This works by having calling a method from the parent element to delete the child element. This is the function used:</p>
+<script src="https://gist.github.com/birch-jayton/1beeda9f344d1b263ee95400e6004edc.js"></script>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");

@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -55,12 +55,12 @@
     <a href="assocArraysApi.html">Associative Arrays</a>
     <a href="objectsApi.html">Objects</a>
   </div>
-  <button class="dropdown-btn">Week 7
+  <button class="dropdown-btn active_at_start">Week 7
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="domManipulation.html">DOM Manipulation</a>
-    <a href="cssAndJs.html">Manipulating CSS Class Properties Using JavaScript</a>
+    <a class="active_child_at_start" href="cssAndJs.html">Manipulating CSS Class Properties Using JavaScript</a>
   </div>
   <button class="dropdown-btn">Week 8 
     <i class="caret material-icons">expand_more</i>
@@ -91,8 +91,12 @@
     <a right href="transAndAnim.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
+<p>JavaScript can also be used to modify attributes of an element including style properties found in <b>CSS</b>.</p>
+<p>This is done by first defining the element as a JavaScript variable as we did in the <a href="domManipulation.html">last lesson</a> and then modifying the properties of the "style" property. Let's use JavaScript to dynamically change this title text. Use the inputs to select the values you want then click "change".</p>
+<h4 id="textToModify">Modify This Text's Style.</h4>
 
+Text Color<input type="color" id="text-color" value="#ff0000">
+<button type="button" onclick="changeElementStyle()">Change!</button>
   
 </div>
 <script type="text/javascript">
