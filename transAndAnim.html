@@ -91,9 +91,19 @@
     <a right href="standardJsEvents.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
-
-  
+<h2>Transitions</h2>
+<p><b>Transitions</b> can be cone in just CSS3 without any Javascript needed. This can be triggered by events such as clicking or hovering with the mouse.</p>
+<div class="hoverExample">Hover over this!</div>
+<p>CSS for transition for hover.</p>
+<script src="https://gist.github.com/birch-jayton/be9cf3eb7b0df94435c53f38d86e497b.js"></script>
+<p>Making CSS transitions is easy. You first make a <b>pseudo-class</b> to define the style of what you want for the final state of the transition. In the above example we created pseudo-class for when the user hovers over a div that is of the "hoverExample" class by adding ":hover". The "transition" property allows us to define how long we want the transition to take. We are able to specify different durations for each property of the style. In this case, the change in width will last 2 seconds and the background color change will last 3. (Line 4). The transition timing function controls the speed curve of the transition and is set to "ease" by default. Tis means its not the same speed the entire transition but "eases" in and out of he transition looking a little smoother.</p>
+<h2 class="animationTitle">Animations</h2>
+<br>
+<br>
+<br>
+<br>
+<script src="https://gist.github.com/birch-jayton/82cc34585c4e8a942804ddfe8651b13a.js"></script>
+<p>Similar to transitions, <b>animations</b> allow you to change CSS properties. The @keyframes rule defines the animation. You must then bind to the class that you want to give the animation to.</p>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
