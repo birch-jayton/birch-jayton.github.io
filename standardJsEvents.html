@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -62,12 +62,12 @@
     <a href="domManipulation.html">DOM Manipulation</a>
     <a href="cssAndJs.html">Manipulating CSS Class Properties Using JavaScript</a>
   </div>
-  <button class="dropdown-btn">Week 8 
+  <button class="dropdown-btn active_at_start">Week 8 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="transAndAnim.html">CSS3 Transitions and Animations</a>
-    <a href="standardJsEvents.html">Standard JavaScript Events</a>
+    <a class="active_child_at_start" href="standardJsEvents.html">Standard JavaScript Events</a>
   </div>
   <button class="dropdown-btn">Week 9
     <i class="caret material-icons">expand_more</i>
@@ -90,10 +90,23 @@
     <h2 class="title">Standard JavaScript Events</h2>
     <a right href="tags.html">❯</a>
   </div>
+<h2>Javascript Events</h2>
+<p>Almost all of the examples in previous lessons have executed Javascript functions. The scripts run under the condition that a certain <b>event</b> happens. The most common one used was onclick, meaning that the function runs when the user clicks something.</p>
+<p>Common events include:</p>
 
-<p>Coming Soon</p>
-
-  
+<ul>
+  <li>onchange</li>
+  <li>onclick</li>
+  <li>onmouseover</li>
+  <li>onmouseout</li>
+  <li>onkeydown</li>
+  <li>onload</li>
+</ul>
+<p>This is from a prior example. When the user clicks the button the function is run.</p>
+Enter name: <input id="nameInput" type="text" name="fname">
+  <button type="button" onclick="displayName()">Submit</button>
+  <p>This is what is in the HTML document. Notice the "displayName" function is defined in the "onclick" attribute.</p>
+  <script src="https://gist.github.com/birch-jayton/44557db7f05480e168a42c48a21efaae.js"></script>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
