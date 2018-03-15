@@ -418,3 +418,25 @@ function changeElementStyle() {
 	//Set element text size
 	//myElement.style.font-size = myTextSize;
 }
+
+function onmouseoverExample() {
+	var myElement = document.getElementById("hoverExample");
+	myElement.innerHTML = "This changed when you hovered over the element.";
+	myElement.style.color = "red";
+}
+
+function onmouseoutExample() {
+	alert("This alert occured when you moved your mouse away from the element.");
+ }
+
+function ontouchmoveExample() {
+	var myElement = document.getElementById("touchExample");
+	myElement.innerHTML = "You began to drag your finger!";
+	myElement.style.color = "red";
+}
+
+function ontouchendExample() {
+	var myElement = document.getElementById("touchExample");
+	myElement.innerHTML = "This text will change when you begin to drag your finger starting from this element.";
+	myElement.style.color = "black";
+}

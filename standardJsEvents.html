@@ -107,6 +107,28 @@ Enter name: <input id="nameInput" type="text" name="fname">
   <button type="button" onclick="displayName()">Submit</button>
   <p>This is what is in the HTML document. Notice the "displayName" function is defined in the "onclick" attribute.</p>
   <script src="https://gist.github.com/birch-jayton/44557db7f05480e168a42c48a21efaae.js"></script>
+  <p>Another common one is "onmouseover" which triggers events when the mouse is hovering over the element and "onmouseout" which occurs when the mouse moves away from the element. To demonstrate this we will have an event occur when you hover the mouse over the following title as well as trigger a second event when the mouse moves away.</p>
+  <h2 id="hoverExample" onmouseover="onmouseoverExample()" onmouseout="onmouseoutExample()">Hover Over This Title With The Mouse</h2>
+  <p>The HTML for the element looks like this:</p>
+  <script src="https://gist.github.com/birch-jayton/3ad0d636815339ab02d7f9d5dbe476bb.js"></script>
+ <p>The functions look like this:</p>
+ <script src="https://gist.github.com/birch-jayton/7bf42849cc8bdf18f6fad9f04e72d158.js"></script>
+ <h2>Mobile Specific Events</h2>
+ <p>HTML 5 has specific DOM events for mobile devices called <b>Touch Events</b>. Similar to a mouse clicking this involves when the user touches their finger to the screen.</p>
+ <p>These touch events are:</p>
+ <ul>
+   <li>ontouchcancel</li>
+   <li>ontouchend</li>
+   <li>ontouchmove</li>
+   <li>ontouchstart</li>
+ </ul>
+ <p>To test this we will have an element trigger an event when the user places their finger on the screen and moves it.</p>
+ <p><b>NOTE: to test this you must set browser to replicate mobile in the developer/inspector console or test on a mobile device.</b></p>
+ <h2 id="touchExample" ontouchmove="ontouchmoveExample()" ontouchend="ontouchendExample()">This text will change when you begin to drag your finger starting from this element.</h2>
+ <p>The HTML for the touch example element above looks like this:</p>
+ <script src="https://gist.github.com/birch-jayton/267a3f8cd0af57821fbc3cf3dc2d181a.js"></script>
+ <p>The functions triggered look like this:</p>
+ <script src="https://gist.github.com/birch-jayton/b888320ad4675e70f381470686aef9dd.js"></script>
 </div>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
