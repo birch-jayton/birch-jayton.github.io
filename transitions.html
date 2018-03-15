@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -75,11 +75,11 @@
   <div class="dropdown-container">
     <a href="tags.html">HTML5 Tags</a>
   </div>
-  <button class="dropdown-btn">Week 10 
+  <button class="dropdown-btn active_at_start">Week 10 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="transitions.html">Transitions</a>
+    <a class="active_child_at_start" href="transitions.html">Transitions</a>
     <a href="transforms.html">Transforms</a>
     <a href="animations.html">Animations</a>
   </div>
@@ -87,11 +87,16 @@
 <div class="main">
   <div class="pagination lesson_header">
     <a left href="tags.html">❮</a>
-    <h2 class="title">Transitions</h2>
+    <h2 class="title">Triggering Transitions</h2>
     <a right href="transforms.html">❯</a>
   </div>
+<p>Transitions were explained in a <a href="transAndAnim.html">previous lesson</a> and can also be controlled with Javascript. Let's use the example we used earlier but modify it a little bit with Javascript. We will begin with the same transition that happens when the user hovers over the element. This transition is specified in CSS.</p>
+<div class="hoverExample">Hover over this!</div>
+<p>Lets change the transition to be instantanious instead of the gradual change. We can change it by clicking this button:</p>
+<button onclick="changeTransition()">Change Transition Style</button>
+<p>After clicking the button, hover over the bar and the bar will now change instantly instead of gradually. We changed the transition with Javascript!</p>
+<script src="https://gist.github.com/birch-jayton/0918b721ac49e7df5a2d826868c2f5a4.js"></script>
 
-<h2>Transitions</h2>
 
 
   

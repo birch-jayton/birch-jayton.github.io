@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -75,12 +75,12 @@
   <div class="dropdown-container">
     <a href="tags.html">HTML5 Tags</a>
   </div>
-  <button class="dropdown-btn">Week 10 
+  <button class="dropdown-btn active_at_start">Week 10 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="transitions.html">Transitions</a>
-    <a href="transforms.html">Transforms</a>
+    <a class="active_child_at_start" href="transforms.html">Transforms</a>
     <a href="animations.html">Animations</a>
   </div>
 </div>
@@ -91,8 +91,10 @@
     <a right href="animations.html">❯</a>
   </div>
 
-<p>Coming Soon</p>
-
+<p>The <b>transform</b> property allows you to rotate, skew, and scale elements in both 2D and 3D. One function that allows you to dynamically adjust the transform of the object is the rotate() function.</p>
+<h2 id="rotateTitle">Rotate this title</h2>
+<button onclick="rotateExample()">Rotate</button>
+<script src="https://gist.github.com/birch-jayton/b76d7502287c8a8ce17297475d03738f.js"></script>
   
 </div>
 <script type="text/javascript">

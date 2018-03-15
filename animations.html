@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -75,13 +75,13 @@
   <div class="dropdown-container">
     <a href="tags.html">HTML5 Tags</a>
   </div>
-  <button class="dropdown-btn">Week 10 
+  <button class="dropdown-btn active_at_start">Week 10 
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
     <a href="transitions.html">Transitions</a>
     <a href="transforms.html">Transforms</a>
-    <a href="animations.html">Animations</a>
+    <a class="active_child_at_start" href="animations.html">Animations</a>
   </div>
 </div>
 <div class="main">
@@ -90,7 +90,15 @@
     <h2 class="title">Animations</h2>
   </div>
 
-<p>Coming Soon</p>
+<p>Animations are described in a <a href="transAndAnim.html">previous lesson</a> and can also be modified with Javascript.</p>
+<h2 id="animateTitle">Move this title</h2>
+<br>
+<br>
+<br>
+<button onclick="animateExample()">Animate title</button>
+<p>This animation is done in javascript, not CSS demonstrating that animations can be done dynamically from scripting.</p>
+<p>This is what the script looks like:</p>
+<script src="https://gist.github.com/birch-jayton/2c528978682a127a1570ce7c64316288.js"></script>
 <script type="text/javascript">
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;

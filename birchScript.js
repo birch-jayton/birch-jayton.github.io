@@ -440,3 +440,33 @@ function ontouchendExample() {
 	myElement.innerHTML = "This text will change when you begin to drag your finger starting from this element.";
 	myElement.style.color = "black";
 }
+
+function drawOnCanvas() {
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(95,50,40,0,2*Math.PI);
+	ctx.stroke();
+}
+
+function changeTransition() {
+	document.getElementsByClassName("hoverExample")[0].style.transition = "none";
+}
+
+function rotateExample() {
+	document.getElementById("rotateTitle").style.transform = "rotate(50deg)";
+}
+
+function animateExample(){
+	var elem = document.getElementById("animateTitle");
+	var pos = 0;
+	var id = setInterval(frame, 9);
+	function frame(){
+		if (pos == 550) {
+      clearInterval(id);
+    } else {
+      pos++;  
+      elem.style.left = pos + 'px'; 
+    }
+	}
+}
