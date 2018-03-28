@@ -1,4 +1,16 @@
 function get_movie_data_button_clicked(){
+	//lose focus from search
+	document.getElementById("movieInput").blur();
+
+	//delete previous results, if any.
+	var results = document.getElementById("results");
+	while (results.firstChild){
+		results.removeChild(results.firstChild);
+	}
+
+	//show loader
+	document.getElementById("loader").style.display = "block";
+
 	//Get movie title from user input
 	var movieTitle = document.getElementById("movieInput").value;
 
@@ -12,6 +24,11 @@ function get_movie_data_button_clicked(){
 		if (this.readyState == 4 && this.status ==200) {
 			var jsonObj = JSON.parse(this.responseText);
 			console.log(jsonObj);
+			//hide loader
+			document.getElementById("loader").style.display = "none";
+			if (jsonObj.Response == "False") {
+				showDisplayError(jsonObj.Error);
+			}
 			displayCardResults(jsonObj);
 		}
 	}
@@ -118,6 +135,7 @@ function displaySearchResults(jsonObj) {
 }
 
 function getGoodResults(movieId) {  
+	document.getElementById('id01').style.display='block';
 	var url = "https://www.omdbapi.com/?apikey=39ebc70b&i=" + movieId + "&plot=full";
 	console.log(url);
 	var xhttp = new XMLHttpRequest();
@@ -157,7 +175,8 @@ function showGoodResults(jsonObj) {
 		}
 	}
 
-	document.getElementById('id01').style.display='block';
+	document.getElementById("modalMain").style.display = 'block';
+	
 
 }
 
@@ -185,6 +204,7 @@ function displayCardResults(jsonObj) {
 		var card = document.createElement('div');
 		card.classList.add("movie-card");
 		card.classList.add("col-3");
+		card.classList.add("animate-bottom")
 
 		//create card content
 		var cardContent = document.createElement('div');
@@ -325,4 +345,11 @@ function showRtProgress(score) {
 	    
 	  }
 	}
+}
+
+function showDisplayError(error) {
+	var errorElem = document.getElementById('errorMessage')
+	errorElem.innerHTML = error;
+	errorElem.style.display = 'block';
+
 }
