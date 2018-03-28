@@ -3,7 +3,7 @@ function get_movie_data_button_clicked(){
 	var movieTitle = document.getElementById("movieInput").value;
 
 	//Create the URL with the title as a parameter
-	var url = "https://www.omdbapi.com/?apikey=39ebc70b&s=" + movieTitle;
+	var url = "https://www.omdbapi.com/?apikey=39ebc70b&s=" + movieTitle + "&type=movie";
 	
 	//Instantiate a XMLHttpRequest objext and define 
 	//    the onreadystatechange function
@@ -163,6 +163,9 @@ function showGoodResults(jsonObj) {
 
 function closeModal() {
 	document.getElementById('id01').style.display='none';
+	document.getElementById('imdbInfo').style.display = 'none';
+	document.getElementById('metacriticInfo').style.display = 'none';
+	document.getElementById('rtInfo').style.display = 'none';
 }
 
 function displayCardResults(jsonObj) {
