@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="sidenav">
-  <a class="active_child_at_start" href="index.html">About</a>
+  <a href="index.html">About</a>
   <button class="dropdown-btn">Week 2 
     <i class="caret material-icons">expand_more</i>
   </button>
@@ -69,11 +69,11 @@
     <a href="transAndAnim.html">CSS3 Transitions and Animations</a>
     <a href="standardJsEvents.html">Standard JavaScript Events</a>
   </div>
-  <button class="dropdown-btn">Week 9
+  <button class="dropdown-btn active_at_start">Week 9
     <i class="caret material-icons">expand_more</i>
   </button>
   <div class="dropdown-container">
-    <a href="tags.html">HTML5 Tags</a>
+    <a class="active_child_at_start" href="tags.html">HTML5 Tags</a>
   </div>
   <button class="dropdown-btn">Week 10 
     <i class="caret material-icons">expand_more</i>
@@ -90,8 +90,31 @@
     <h2 class="title">HTML 5 Tags</h2>
     <a right href="transitions.html">❯</a>
   </div>
+<p>HTML 5 provides <b>tags</b> that make things possible that required browsers with plugins like flash in the past. This includes the ability to embed audio and video. These tags act like other basic HTML tags with properties that you can modify to suit the embeddings to your needs.</p>
+<h2>The Video Tag</h2>
+<p>Here is a video of my dog, Jango, sneezing.</p>
+<video width="400" controls>
+  <source src="jangoSneeze.mp4.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<script src="https://gist.github.com/birch-jayton/f1652ba52dd25de974bdbad353494129.js"></script>
+<p>Pretty gross right? I think the face he makes is funny. Anyways... similar to the img tag, you specify the size of the element as well as the source file. It is always good practice to add some alternative text in case the file cannot load for some reason. One cool thing about the HTML 5 video tag is the "controls" attribute that lets you define youtube-like controls for your video to play/pause, control volume, full-screen, etc.</p>
+<h2>The Audio Tag</h2>
+<p>The audio tag is almost identical to the video tag but plays audio files instead. You specify controls and the source file.</p>
+<audio controls>
+  <source src="clip1-sabbath.mp3" type="audio/mpeg">
+</audio>
+<script src="https://gist.github.com/birch-jayton/0fd7e70be794d02c434c8e0386375499.js"></script>
+<h2>The Canvas Tag</h2>
+<p>This tag is used to create a canvas on which you can dynamically create graphics with Javascript</p>
+<canvas id="myCanvas" width="200" height="100">
+  Your browser does not support the canvas element.
+</canvas>
+<br>
+<button type="button" onclick="drawOnCanvas()">Draw</button>
+<script src="https://gist.github.com/birch-jayton/19f12f87ad81374d9748f1aa2a702cb1.js"></script>
+<script src="https://gist.github.com/birch-jayton/e349e98930c2806c3920752b6a802e0f.js"></script>
 
-<p>Coming Soon</p>
 
   
 </div>
