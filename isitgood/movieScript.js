@@ -1,4 +1,10 @@
 function get_movie_data_button_clicked(){
+	//clear error messages
+	document.getElementById("errorMessage").innerHTML = "";
+
+	//set watchlist button
+	document.getElementById("watchListButton").innerHTML = "View Watch List";
+	document.getElementById("watchListButton").onclick = function() {viewWatchList();}
 	//lose focus from search
 	document.getElementById("movieInput").blur();
 
@@ -175,6 +181,8 @@ function showGoodResults(jsonObj) {
 		}
 	}
 
+	document.getElementById("addToWatchlistBtn").onclick = function() {addToWatchlist(jsonObj)}
+
 	document.getElementById("modalMain").style.display = 'block';
 	
 
@@ -348,8 +356,132 @@ function showRtProgress(score) {
 }
 
 function showDisplayError(error) {
+	//delete previous results, if any.
+	var results = document.getElementById("results");
+	while (results.firstChild){
+		results.removeChild(results.firstChild);
+	}
 	var errorElem = document.getElementById('errorMessage')
 	errorElem.innerHTML = error;
 	errorElem.style.display = 'block';
+
+}
+
+function addToWatchlist(jsonObj) {
+	if (typeof(Storage) !== "undefined") {
+		if (localStorage.Search) {
+			var watchList = localStorage.getItem("Search");
+			watchList = JSON.parse(watchList);
+			watchList.push(jsonObj);
+			localStorage.setItem("Search", JSON.stringify(watchList));
+		}
+		else {
+			var watchList = new Array();
+			watchList.push(jsonObj);
+			localStorage.setItem("Search", JSON.stringify(watchList));
+		}
+	} else {
+		alert("This example won't work because your browser doesn't support web storage.");
+	}
+
+	console.log(localStorage);
+}
+
+function viewWatchList() {
+	if (localStorage.Search && JSON.parse(localStorage.Search).length > 0) {
+		displayWatchList();
+	} else {
+		showDisplayError("No movies in your watchlist");
+	}
+
+	document.getElementById("watchListButton").innerHTML = "Search Movies";
+	document.getElementById("watchListButton").onclick = function() {location.href='index.html';}
+}
+
+function displayWatchList() {
+	var jsonObj = JSON.parse(localStorage.getItem("Search"));
+	// go back to top
+	document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+	//delete previous results, if any.
+	var results = document.getElementById("results");
+	while (results.firstChild){
+		results.removeChild(results.firstChild);
+	}
+
+	//loop through results
+	for (var i = 0; i < jsonObj.length; i++) {
+		//create card
+		var card = document.createElement('div');
+		card.classList.add("movie-card");
+		card.classList.add("col-3");
+		card.classList.add("animate-bottom")
+
+		//create card content
+		var cardContent = document.createElement('div');
+		cardContent.classList.add("movie-card-content");
+
+		//create title element
+		var titleElem = document.createElement("h2");
+
+		//create title node
+		var titleNode = document.createTextNode(jsonObj[i].Title);
+
+		//append title node to title element
+		titleElem.appendChild(titleNode);
+
+		//append title element to card content
+		cardContent.appendChild(titleElem);
+
+		//create year element
+		var yearElem = document.createElement("h4");
+
+		//create year text node
+		var yearNode = document.createTextNode(jsonObj[i].Year);
+
+		//append year node to year element
+		yearElem.appendChild(yearNode);
+
+		//append year element to card content
+		cardContent.appendChild(yearElem);
+
+		//create img element for poster
+		var poster = document.createElement("img");
+		poster.src = jsonObj[i].Poster;
+		poster.classList.add("poster");
+
+		//append poster to card content
+		cardContent.appendChild(poster);
+
+		//create button
+		var button = document.createElement("div");
+		var imdbID = jsonObj[i].imdbID;
+		button.innerHTML = '<button class="btn" onclick="getGoodResults(\''+ imdbID +'\')">Is it Good?</button>';
+		cardContent.appendChild(button);
+
+		//add remove movie button
+		var removeElem = document.createElement("div");
+		removeElem.innerHTML= '<button class="removeMovieButton" onclick="removeMovie('+ i +')">Remove Movie</button>';
+		cardContent.appendChild(removeElem);
+
+
+		//append card content to card
+		card.appendChild(cardContent);
+
+		//append card to results
+		document.getElementById("results").appendChild(card);
+
+
+	}
+}
+
+function removeMovie(index) {
+	console.log(index)
+	var watchList = localStorage.getItem("Search");
+	watchList = JSON.parse(watchList);
+	watchList.splice(index, 1);
+	localStorage.setItem("Search", JSON.stringify(watchList));
+	viewWatchList();
 
 }
